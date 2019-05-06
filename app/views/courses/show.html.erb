@@ -21,4 +21,21 @@
             <%= @course.description %>
         </div>
     </div>
+
+    <div class=" col-12">
+        <% @course.sections.each do |section| %>
+            <div class="booyah-box section">
+                <%= section.title %>
+                <% section.lessons.each do |lesson| %>
+                    <div class = "booyah-box lesson">
+                        <%= link_to lesson_path(lesson) do %>
+                            <b><%= lesson.title %></b>
+                                -
+                            <b><%= lesson.subtitle %></b>
+                        <% end %>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
 </div>
