@@ -30,16 +30,25 @@
     <div class=" col-12">
         <% @course.sections.each do |section| %>
             <div class="booyah-box section">
-                <%= section.title %>
-                <% section.lessons.each do |lesson| %>
-                    <div class = "booyah-box lesson">
-                        <%= link_to lesson_path(lesson) do %>
-                            <b><%= lesson.title %></b>
-                                -
-                            <b><%= lesson.subtitle %></b>
-                        <% end %>
-                    </div>
-                <% end %>
+                <h3>
+                    <%= section.title %>
+                </h3>
+                <div class="row">
+                    <% section.lessons.each do |lesson| %>
+                        <br />
+                        <div class="col-12 col-sm-6">
+                            <div class = "lesson text-center">
+                               <br />
+                                <%= link_to lesson_path(lesson) do %>
+                                    <b><%= lesson.title %></b>
+                                    <br />
+                                    <b><%= lesson.subtitle %></b>
+                                <% end %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+                <br class="clr" />
             </div>
         <% end %>
     </div>
