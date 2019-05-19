@@ -1,7 +1,8 @@
 <br />
 
 <div class="booyah-box col-10 offset-1">
-  <h1>Courses I am Taking</h1>
+  <h1 style=background:#290cd4;color:white;>Courses I am Taking</h1>
+  <hr>
   <% current_user.enrolled_courses.each do |course| %>
     <h3 class="text-center">
         <%= link_to course.title, course_path(course) %>
@@ -23,7 +24,8 @@
     <br class="clr" />
   <% end %>
 
-  <h1>What I'm Teaching</h1>
+  <h1 style=background:#290cd4;color:white;>Courses I'm Teaching</h1>
+  <hr>
   <% current_user.courses.each do |course| %>
         <h3 class="text-center">
               <%= link_to course.title, course_path(course) %>

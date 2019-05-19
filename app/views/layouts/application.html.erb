@@ -61,31 +61,27 @@
       <div class="container">
       <div class="row">
       <div class="col-12 col-sm-3">
-        <b>Instructors</b>
-        <br />
+        <h5>Instructors</h5>
         <%= link_to 'Teach a Course', new_instructor_course_path %>
         <br />
         <%= link_to 'My Dashboard', dashboard_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>About</b>
+        <h5>About</h5>
+        <%= link_to 'Team', team_path %>
         <br />
-        <%= link_to 'Team', '#' %>
+        <%= link_to 'Careers', career_path %>
         <br />
-        <%= link_to 'Careers', '#' %>
-        <br />
-        <%= link_to 'Privacy Policy', '#' %>
+        <%= link_to 'Privacy Policy', privacy_path %>
       </div>
       <div class="col-12 col-sm-3">
-        <b>Contact</b>
-        <br />
+        <h5>Contact</h5>
         AmberLMcGregor22@gmail.com
         <br />
         Denver CO, 80123
       </div>
       <div class="col-12 col-sm-3 social">
-        <b>Social</b>
-          <br /><br />
+        <h5>Social</h5>
           <%= link_to 'https://github.com/mcgrea17' do %>
             <span class="fa fa-github-square fa-2x social-button"></span>
           <% end %>
