@@ -37,7 +37,9 @@
   <h1 class="text-center"><%= current_course.title %></h1>
   <br />
   <% if current_course.image.present? %>
+    <div id="imageHolder">
       <%= image_tag current_course.image.url, class: 'img-fluid style_image' %>
+    </div>
   <% end %>
 
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
