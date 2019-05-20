@@ -12,10 +12,15 @@
         <div class="booyah-box col-10 offset-1">
             <div class="row">
                 <div class="col-sm-8 col-12">
-                    <%= course.description %>
-                    <% if course.image.present? %>
-                        <%= image_tag course.image.url, class: 'img-fluid style_image' %>
-                    <% end %>
+                    <div >
+                         <%= course.description %>
+                        <br/>
+                    </div>
+                    <div class="row top-buffer">
+                        <% if course.image.present? %>
+                            <%= image_tag course.image.url, class: 'img-fluid style_image' %>
+                        <% end %>
+                    </div>
                 </div>
                 <div class="col-sm-4 col-12 text-center">
                     <%= link_to 'More Details', course_path(course), class: 'btn btn-primary btn-large' %>
